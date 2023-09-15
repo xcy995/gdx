@@ -1,10 +1,13 @@
 import json
 import os
+
+from happy_python import HappyConfigBase
 from happy_python.cmd import hlog, get_exit_code_of_cmd
+
 website_details = []
 # 定义各个变量的路径命令
 
-class Config(LoadCustomizeZymodConfig):
+class Config(HappyConfigBase):
     def __init__(self):
         super().__init__()
 
@@ -18,11 +21,11 @@ class Config(LoadCustomizeZymodConfig):
 
 def main():
     node = '/usr/bin/node '
-    js = '/home/yyf/FANGXIE/zhiyan.js'
+    js = '/home/yyf/workspace/gdx/zhiyan.js'
     chrome = '/usr/bin/google-chrome-stable'
     url = 'https://zhiyan.cdgeekcamp.com'
-    json1 = '/home/yyf/FANGXIE/2023_09_11_10_09_45_45.json'
-    jpg = '/home/yyf/FANGXIE/2023_09_11_10_09_45_45.jpg'
+    json1 = '/home/yyf/workspace/gdx/2023_09_11_10_09_45_45.json'
+    jpg = '/home/yyf/workspace/gdx/2023_09_11_10_09_45_45.jpg'
 
     node_modules_path = '/home/yyf/workspace/ZhiYanModule/zhiyan-mod-browser/node_modules'
 # 构建node和js命令
